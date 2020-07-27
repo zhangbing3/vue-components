@@ -1,0 +1,35 @@
+/* Element Variables */
+
+// Override Element UI variables
+$--color-primary: #137de4;
+$--color-success: #13ce66;
+$--color-warning: #ffba00;
+$--color-danger: #ff4949;
+$--color-info: #666;
+$--button-font-weight: 400;
+$--color-text-regular: #666;
+$--border-color-light: #dfe4ed;
+$--border-color-lighter: #e6ebf5;
+$--table-border: 1px solid#dfe6ec;
+$--border-radius-base: 2px;
+$--input-height: 26px;
+$--select-option-height: 28px;
+$--select-input-font-size: 12px;
+$--font-size-base: 12px;
+$--color-text-placeholder: #666;
+$--background-color-base: #EEEEEE;
+$--table-header-font-color: #333333;
+$--button-mini-padding-vertical: 6px;
+$--button-mini-padding-horizontal: 24px;
+
+// Icon font path, required
+$--font-path: '~element-ui/lib/theme-chalk/fonts';
+
+// Apply overrided variables in Element UI
+@import '~element-ui/packages/theme-chalk/src/index';
+
+// The :export directive is the magic sauce for webpack
+// https://mattferderer.com/use-sass-variables-in-typescript-and-javascript
+:export {
+  theme: $--color-primary;
+}
