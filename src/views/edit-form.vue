@@ -10,7 +10,8 @@
 
 <script lang="ts">
 import { Component, Emit, Vue, Prop } from 'vue-property-decorator'
-import { EDIT_TYPE, EditForm } from '@/components/edit-form/index'
+import { EditForm } from '@/components/edit-form/index'
+import { EDIT_TYPE } from '@/components/common/enums'
 
 @Component({
   components: {

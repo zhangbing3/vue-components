@@ -15,7 +15,8 @@
 
 <script lang="ts">
 import { Component, Emit, Vue, Prop } from 'vue-property-decorator'
-import { EDIT_TYPE, EditTable } from '@/components/edit-table/index'
+import { EditTable } from '@/components/edit-table/index'
+import { EDIT_TYPE } from '@/components/common/enums'
 
 @Component({
   components: {
