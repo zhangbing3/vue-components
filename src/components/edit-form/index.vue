@@ -1,5 +1,5 @@
 <template>
-  <el-form class="edit-form" :model="model" label-width="80px">
+  <el-form ref="editForm" class="edit-form" :model="model" label-width="80px">
     <el-form-item
       v-for="item in fields"
       :key="item.name"
@@ -22,6 +22,7 @@
 import { Component, Prop, Vue } from 'vue-property-decorator'
 import EditFormItem from '../common/edit-form-item'
 import { EDIT_TYPE } from '../common/enums'
+import { ElForm } from 'element-ui/types/form'
 
 @Component({ components: { EditFormItem } })
 export default class EditTable extends Vue {
@@ -29,8 +30,8 @@ export default class EditTable extends Vue {
   @Prop({ type: Array, default: () => [] }) private fields!: any[]
   @Prop({ type: Boolean, default: true }) private editable!: boolean
 
-  getEditFromData() {
-    return this.model
+  getEditFrom(): ElForm {
+    return this.$refs.editForm as ElForm
   }
 }
 </script>

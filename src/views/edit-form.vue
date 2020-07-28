@@ -60,12 +60,8 @@ export default class Home extends Vue {
     }
   ]
   handleEditFromClick () {
-    const data = (this.$refs.editForm as EditForm).getEditFromData()
-    console.log('form', data)
-  }
-
-  created () {
-    console.log('=======')
+    const form = (this.$refs.editForm as EditForm).getEditFrom()
+    console.log('form', form)
   }
 }
 </script>
